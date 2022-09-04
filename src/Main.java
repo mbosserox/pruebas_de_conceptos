@@ -28,6 +28,7 @@ public class Main {
                     if(nums[x]+nums[j]==target){
                         solution[0]=x;
                         solution[1]=j;
+                        //Collectiomn.positionOf(target-x);
                         return solution;
                     }
                 }
