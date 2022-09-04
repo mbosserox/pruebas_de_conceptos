@@ -1,3 +1,9 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Main {
 /*    Challenge
     Create a function that given an array of integer numbers and an integer target, returns the indexes of the two numbers such that they add up to the target.
@@ -22,6 +28,7 @@ public class Main {
 
     public int[] getTarget(int[] nums, int target ) {
         int[] solution = new int[2];
+
         for(int x = 0 ; x<nums.length;x++){
             for(int j = x+1 ; j<nums.length;j++){
                 if(x!=j){
@@ -29,11 +36,17 @@ public class Main {
                         solution[0]=x;
                         solution[1]=j;
                         //Collectiomn.positionOf(target-x);
+
                         return solution;
                     }
                 }
             }
         }
+
+//        ArrayList<Integer> list = new ArrayList(Collections.singleton(nums));
+//        for(int x = 0 ; x<nums.length;x++) {
+//           int auxPos = list.contains(target - list.get(x));
+//        }
         return solution;
     }
 
