@@ -1,3 +1,5 @@
+package colections;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -20,28 +22,8 @@ public class ColeccionesTesteos {
 //		/*
 //		 *
 //		 * LINKED LIST*/
-//		LinkedList<Integer> test2 = new LinkedList<>();
-//		//USADA COMO QUEUE
-//		test2.offer(1);
-//		test2.offer(2);
-//		test2.offer(3);
-//		System.out.println("print comun");
-//		test2.forEach(e ->System.out.print(e));
-//		System.out.println("print 2");
-//		System.out.println(test2.poll());
-//		System.out.println(test2.poll());
-//		System.out.println(test2.poll());
-//		//USADA COMO PILA
-//		test2.push(1);
-//		test2.push(2);
-//		test2.push(3);
-//		System.out.println("print comun");
-//		System.out.println(Collections.max(test2));
-//		test2.stream().forEach(e-> System.out.println(e*2));
-//		test2.stream().anyMatch(e-> e>2);
-//		System.out.println("print 2");
-//		System.out.println(test2.pop());
-//		System.out.println(test2.pop());
+
+
 
 		double[] ints = {2.75,3.5};
 		List<Double> list = Arrays.stream(ints).boxed().collect(Collectors.toList());
