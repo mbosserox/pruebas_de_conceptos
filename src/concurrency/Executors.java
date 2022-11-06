@@ -1,5 +1,6 @@
 package concurrency;
 
-public class LocksAndSync {
+public class Executors {
+
     public static void main(String[] args) {}
 }
