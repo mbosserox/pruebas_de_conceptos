@@ -1,13 +1,11 @@
 package concurrency;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.function.Supplier;
 
 public class CompletablFuture {
 
-    CompletableFuture<String> completableFuture = new CompletableFuture();
+    static ExecutorService threasService  = Executors.newSingleThreadExecutor();
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         CompletableFuture<String> future = (CompletableFuture<String>) CompletableFuture.supplyAsync(sayHelloAsync());
@@ -23,6 +21,7 @@ public class CompletablFuture {
         });
         totalStringFuture = lambdaApplyAsyc.thenApply( lamda ->  sayHelloAsync()+ lamda);
         System.out.println(totalStringFuture.get());
+         threasService.submit(()->sayHelloAsync());
     }
 
     public static Supplier<String> sayHelloAsync(){
