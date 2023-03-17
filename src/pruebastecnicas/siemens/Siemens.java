@@ -1,12 +1,11 @@
 package pruebastecnicas.siemens;
 
-import java.awt.*;
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class Siemens {
     static final Character WALL = '#';
     static final Character FREE_SPACE = '*';
+    static final String WHITE_SPACE = " ";
     static final Character DOOR = 'D';
     static HashMap<String,Color> colors ;
 
@@ -26,7 +25,7 @@ public class Siemens {
                     System.out.print(line.charAt(i));
                 }else{
                     System.out.print(colors.get(String.valueOf(line.charAt(i))));
-                    System.out.print(" ");
+                    System.out.print(WHITE_SPACE);
                     System.out.print(Color.RESET);
                 }
 
